@@ -1,0 +1,101 @@
+body {
+  margin: 0;
+  font-family: Arial;
+  background: black;
+  color: black;
+}
+
+/* center search */
+.container {
+  text-align: center;
+  padding: 50px;
+}
+
+h1 {
+  font-size: 40px;
+  color:white;
+
+}
+
+/* search */
+.search-box {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+input {
+  padding: 10px;
+  width: 250px;
+  border-radius: 5px;
+  border: none;
+}
+
+button {
+  padding: 10px 15px;
+  background: red;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.section-title {
+  text-align: center;   /* 🔥 center */
+  margin-top: 40px;
+  font-size: 28px;
+  font-weight: bold;
+  color: white;
+
+  letter-spacing: 1px;
+}
+.section-title::after {
+  content: "";
+  display: block;
+  width: 120px;
+  height: 3px;
+  background: red;
+  margin: 10px auto;
+  border-radius: 5px;
+}
+
+.movies {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 220px));
+  gap: 25px;
+  padding: 30px;
+
+  justify-content: center;   /* 🔥 center when few items */
+}
+
+/* cards */
+.movie-card {
+  background: whitesmoke;
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.movie-card:hover {
+  transform: scale(1.08);
+}
+
+.movie-card img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+.movie-card h3 {
+  padding: 10px;
+  font-size: 16px;
+}.released {
+  color: green;   /* green */
+  font-weight: bold;
+}
+
+.upcoming {
+  color: red;   /* orange */
+  font-weight: bold;
+}

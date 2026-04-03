@@ -1,0 +1,36 @@
+body {
+  background:black;;
+  font-family: Arial;
+}
+
+.details-card {
+  display: flex;
+  gap: 30px;
+  max-width: 900px;
+  margin: 50px auto;
+  background:#1c1c1c;
+  color:white;
+  padding: 20px;
+  border-radius: 12px;
+
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.details-card img {
+  width: 300px;
+  border-radius: 10px;
+}
+.info {
+  flex: 1;
+}
+
+button {
+  margin-top: 10px;
+  margin-right: 10px;
+  padding: 10px 15px;
+  background: linear-gradient(to right, red,darkred);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
