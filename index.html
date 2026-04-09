@@ -2,18 +2,26 @@
 <html>
 <head>
   <title>Movie App</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+<nav class="navbar">
+  <div class="logo">🎬 CineSearch Pro</div>
+
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="#trending-section">Trending</a>
+    <a href="watchlist.html" class="watch-btn">❤️ Watchlist</a>
+  </div>
+</nav>
 <div class="container">
-  <h1>CineSearch Pro</h1>
   <div class="search-box">
     <input type="text" id="movieInput" placeholder="Search movie...">
     <button id="searchBtn">Search</button>
   </div>
 </div>
-<h2 class="section-title">🔥Trending Movies</h2>
+<h2 id="trending-section" class="section-title">🔥 Trending Movies</h2>
 <div id="trending" class="movies"></div>
-<script src="index.js"></script>
+<script src="js/index.js"></script>
 </body>
 </html>
