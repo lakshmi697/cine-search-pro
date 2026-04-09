@@ -10,11 +10,44 @@ body {
   text-align: center;
   padding: 50px;
 }
+.watchlist-container {
+  display: flex;
+  justify-content: center;
+  margin: 10px 0;
+  
+}
 
 h1 {
-  font-size: 40px;
-  color:white;
+  font-size: 50px;
+  text-align: center;
+  font-weight: bold;
+  text-shadow: 0 0 10px red, 0 0 20px orange;
 
+  background: linear-gradient(
+    90deg,
+    red,
+    orange,
+    yellow,
+    red
+  );
+
+  background-size: 300%;
+  background-clip: text;              /* standard */
+-webkit-background-clip: text;      /* chrome support */
+
+color: transparent;
+-webkit-text-fill-color: transparent;
+  
+
+  animation: shine 3s linear infinite;
+}
+@keyframes shine {
+  0% {
+    background-position: 0%;
+  }
+  100% {
+    background-position: 300%;
+  }
 }
 
 /* search */
@@ -23,6 +56,7 @@ h1 {
   justify-content: center;
   gap: 10px;
   margin-top: 20px;
+  font-size: larger;
 }
 
 input {
@@ -70,20 +104,39 @@ button {
 
 /* cards */
 .movie-card {
-  background: whitesmoke;
+  background:#1a1a1a;
+  color: white;
   border-radius: 10px;
   overflow: hidden;
   cursor: pointer;
   transition: 0.3s;
+  position:relative ;
+  
+}
+
+.movie-card button {
+  position: relative;
+  bottom: 10px;
+  left: 10px;
+  background: black;
+  color: red;
+  border-radius: 8px;
+  padding: 8px;
+}
+.movie-card h3 {
+  color: white;
+  font-weight: 600;
+  min-height: 40px;
 }
 
 .movie-card:hover {
-  transform: scale(1.08);
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(255, 0, 0, 0.6);
 }
 
 .movie-card img {
   width: 100%;
-  height: 300px;
+  height: 250px;
   object-fit: cover;
 }
 
@@ -98,4 +151,70 @@ button {
 .upcoming {
   color: red;   /* orange */
   font-weight: bold;
+}
+.watchlist-btn {
+  background: rgb(193, 193, 103);
+  color:black;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 50px; /* pill shape */
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 18px;
+}
+
+.watchlist-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px red;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 30px;   /* 🔥 spacing improve */
+  background: black;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  border: 1px solid red;   /* optional glow border */
+  border-bottom: 1px solid rgba(255,0,0,0.4);
+}
+
+
+/* logo left fix */
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: red;
+}
+
+/* links right side proper spacing */
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 25px;   /* 🔥 equal spacing */
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+}
+.actor-info {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.actor-info img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid red;
+}
+
+.actor-info h2 {
+  margin-top: 10px;
+  color: white;
 }
